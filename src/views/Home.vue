@@ -1,18 +1,32 @@
 <template>
   <div class="home">
     <img alt="Vue logo" src="../assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+    <div>
+      <input @click="getIp" type="button" value="Get IP!">
+      <p>{{ ip }}</p>
+    </div>
   </div>
 </template>
 
 <script>
-// @ is an alias to /src
-import HelloWorld from '@/components/HelloWorld.vue'
-
-export default {
-  name: 'Home',
-  components: {
-    HelloWorld
+import axios from "axios"
+  export default {
+  name: 'SearchIp',
+  data () {
+    return {
+      ip: ''
+    }
+  },
+  methods: {
+    getIp() {
+      axios.get('https://httpbin.org/get')
+        .then((response) => {
+          this.ip = response.data.origin;
+        })
+        .catch((e) => {
+          alert(e);
+        });
+    }
   }
 }
 </script>
