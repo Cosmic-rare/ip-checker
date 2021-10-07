@@ -33,21 +33,20 @@ import axios from "axios"
 
 <style>
 #bt {
-  display: block;
-  width: 100px;
-  height: 30px;
-  background-color: #41B883;
-  color: #FFFFFF;
-  text-align: center;
-  text-decoration: none;
-  line-height: 30px;
-  border-radius: 5px;
-  border: 3px solid #41B883;
+	display: block;
+	position: relative;
+	width: 160px;
+	padding: 0.8em;
+	text-align: center;
+	text-decoration: none;
+	color: #fff;
+	background: #41B883;
 }
-
-#bt:hover {
-  text-decoration: none;
-  background-color: #FFFFFF;
-  color: #41B883; 
+#app {
+  font-family: Avenir, Helvetica, Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-align: center;
+  color: #2c3e50;
 }
 </style>
