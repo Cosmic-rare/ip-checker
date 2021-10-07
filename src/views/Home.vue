@@ -2,7 +2,7 @@
   <div class="home">
     <img alt="Vue logo" src="../assets/logo.png">
     <div>
-      <input @click="getIp" type="button" value="Get IP!">
+      <input id='bt' @click="getIp" type="button" value="Get IP!">
       <p>{{ ip }}</p>
     </div>
   </div>
@@ -30,3 +30,24 @@ import axios from "axios"
   }
 }
 </script>
+
+<style>
+#bt {
+  display: block;
+  width: 100px;
+  height: 30px;
+  background-color: #41B883;
+  color: #FFFFFF;
+  text-align: center;
+  text-decoration: none;
+  line-height: 30px;
+  border-radius: 5px;
+  border: 3px solid #41B883;
+}
+
+#bt:hover {
+  text-decoration: none;
+  background-color: #FFFFFF;
+  color: #41B883; 
+}
+</style>
