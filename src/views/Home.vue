@@ -41,6 +41,7 @@ import axios from "axios"
 	text-decoration: none;
 	color: #fff;
 	background: #41B883;
+    margin:0 auto
 }
 
 div {
